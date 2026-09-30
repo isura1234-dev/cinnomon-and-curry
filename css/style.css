@@ -1,0 +1,403 @@
+/*----------Navigation bar-----------*/
+nav {
+    background-color: black;
+    opacity: 0.9;
+    width: 100%;
+    height: 100px;
+}
+
+nav ul {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.8);
+    font-size: 15px;
+}
+
+nav ul li ul {
+    position: fixed;
+    padding: 0px 0px;
+    width: 260px;
+    font-size: 18px;
+    border-radius: 5px;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.8);
+    background-color: black;
+    display: none;
+
+}
+
+nav ul li:focus-within>ul,
+nav ul li:hover>ul {
+    display: initial;
+
+}
+
+nav ul li ul li {
+    width: 100%;
+    font-size: 18px;
+    height: 45px;
+
+
+}
+
+nav li {
+    height: 100px;
+}
+
+nav .aa1 {
+    height: 100%;
+    padding: 0 30px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    color: white;
+
+}
+
+nav .aa1:hover {
+
+    color: #ee581f;
+
+
+}
+
+nav li:first-child {
+    margin-right: auto;
+}
+
+.sidebar {
+    position: fixed;
+    top: 15px;
+    right: 0;
+    height: 50vh;
+    width: 400px;
+    z-index: 999;
+    background-color: black;
+    opacity: 0.9;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.8);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    transition: 0.3s ease;
+}
+
+.sidebar li {
+    width: 100%;
+    font-size: 23px;
+    height: 100%;
+
+
+}
+
+
+.sidebar .aa1 {
+    width: 100%;
+}
+
+.logicon {
+    padding-right: 5px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+}
+
+@media (max-width: 1024px) {
+    nav ul {
+        font-size: 9px;
+    }
+
+}
+
+
+@media (max-width: 768px) {
+    .sidebar li ul li {
+        width: 100%;
+        padding-left: 10px;
+        text-align: center;
+        font-size: 15px;
+        height: 40px;
+
+
+
+    }
+
+    .sidebar li ul {
+        padding-top: 10px;
+        text-align: center;
+        width: 210px;
+        position: absolute;
+        right: 35px;
+        display: block;
+        display: none;
+
+
+
+
+
+    }
+
+    .sidebar li ul li .aa1 {
+        font-size: 15px;
+        text-align: center;
+
+
+
+    }
+
+    nav .aa1 {
+        height: 100%;
+        padding: 0 10px;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        color: white;
+    }
+
+}
+
+.sidebar {
+    opacity: 0;
+    transform: translateX(30px);
+    animation: moveleft 0.6s linear forwards;
+
+}
+
+.menu-button {
+    width: 60px;
+    height: 60px;
+}
+
+@keyframes moveleft {
+    100% {
+        opacity: 0.98;
+        transform: translateY(0px);
+    }
+}
+
+.menu-button {
+    display: none;
+}
+
+@media(max-width:991px) {
+    .hideOnMobile {
+        display: none;
+    }
+
+    .menu-button {
+        display: block;
+    }
+}
+
+
+.menu-button {
+    position: absolute;
+    top: 40px;
+    right: 25px;
+}
+
+#imgn1 {
+    margin-top: 5px;
+}
+
+/*--------hompage background image 1 ---------*/
+.parallax1 {
+    /* The image used */
+    background-image: url("../img/hbi/b1.webp");
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+
+    /* Set a specific height */
+    min-height: 600px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.heading2 {
+    color: white;
+    font-family: minion pro;
+    text-align: center;
+    font-size: 90px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    position: absolute;
+    top: 45%;
+    left: 20%;
+
+}
+
+.heading1 {
+    color: white;
+    font-family: minion pro;
+    text-align: center;
+    font-size: 30px;
+    position: absolute;
+    top: 40%;
+    left: 28.5%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.resbtn1 {
+    position: absolute;
+    top: 75%;
+    left: 44%;
+}
+
+.resbtn2 {
+    text-decoration: none;
+    color: white;
+    font-size: 30px;
+    font-family: helvetica;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.6s ease-in-out;
+    border: solid 1px;
+}
+
+.resbtn2:hover {
+    letter-spacing: 2px;
+    color: #ee581f;
+    border-color: #ee581f;
+}
+
+@media(max-width:1280px) {
+
+    .heading1 {
+        position: absolute;
+        top: 40%;
+        left: 29%;
+    }
+
+    .resbtn1 {
+        position: absolute;
+        top: 67%;
+        left: 43%;
+    }
+}
+
+@media(max-width:1279px) {
+    .heading2 {
+        position: absolute;
+        top: 45%;
+        left: 12.5%;
+    }
+
+    .heading1 {
+        position: absolute;
+        top: 40%;
+        left: 24.2%;
+    }
+
+    .resbtn1 {
+        position: absolute;
+        top: 75%;
+        left: 43%;
+    }
+}
+
+
+
+@media(max-width:1024px) {
+
+    .heading1 {
+        position: absolute;
+        top: 30%;
+        left: 23.7%;
+    }
+
+    .heading2 {
+        position: absolute;
+        top: 35%;
+        left: 12%;
+    }
+
+    .resbtn1 {
+        position: absolute;
+        top: 60%;
+        left: 42%;
+    }
+}
+
+@media(max-width:1024px) {
+    .parallax1 {
+        min-height: 850px;
+    }
+}
+
+@media (max-width:1000px) {
+    .parallax1 {
+        min-height: 1500px;
+    }
+
+}
+
+.homep1 {
+    height: 500px;
+    background-image: url("../img/hbi/b2.webp");
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken;
+}
+
+@media(max-width:1024px) {
+    .homep1 {
+        min-height: 700px;
+    }
+}
+
+@media (max-width:1000px) {
+    .homep1 {
+        min-height: 1000px;
+    }
+}
+
+@media(max-width:853px) {
+    .heading1 {
+        position: absolute;
+        top: 40%;
+        left: 22.2%;
+        font-size: 27px;
+
+    }
+
+    .heading2 {
+        position: absolute;
+        top: 45%;
+        text-align: center;
+        font-size: 74px;
+    }
+
+    .resbtn1 {
+        position: absolute;
+        top: 58%;
+        left: 41.5%;
+    }
+}
+
+@media(max-width:540px) {
+    .resbtn1 {
+        position: absolute;
+        top: 10%;
+        left: 41.5%;
+    }
+}
+
+.ht1 {
+    text-align: center;
+    font-size: 40px;
+    color: #fafdff;
+    font-family: helvetica;
+    padding-top: 20px;
+}

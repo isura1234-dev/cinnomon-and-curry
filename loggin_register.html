@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../bootstrap-5.2.3-/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/login_register.css">
+</head>
+
+<body>
+
+
+    <!-- container start -->
+    <div class="container-fluid">
+        <!-- row start -->
+        <div class="row">
+            <!-- navigation bar loggin button start -->
+            <div class="col-12">
+                <button class="btn btn-outline-primary" data-bs-toggle="modal"
+                    data-bs-target="#logginmodal">Loggin</button>
+            </div>
+            <!-- navigation bar loggin button start -->
+        </div>
+    </div>
+    <!-- container end -->
+
+
+<!-- modal start -->
+
+    <div class="modal" id="logginmodal">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal_head_text">Create Your Dining Experience...</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- nav bar start -->
+                    <ul class="nav nav-tabs">
+                        <!-- loggin tab item start -->
+                        <li class="nav-item">
+                            <button type="button" class="nav-link" data-bs-toggle="tab" data-bs-target="#formloggin"
+                                 id="tablogginbutton" >Log in</button>
+                        </li>
+                        <!-- loggin tab item end -->
+                        <!-- register tab item start -->
+                        <li class="nav-item">
+                            <button type="button" class="nav-link" data-bs-toggle="tab" data-bs-target="#formregister"
+                                 id="tableregisterbutton" onclick="logginactivebutton(this)">Sign up</button>
+                        </li>
+                        <!-- register tab item end -->
+                    </ul>
+                    <!-- nav bar end -->
+
+                    <!-- row end -->
+
+
+                    <!-- loggin form tab content start -->
+                    <div class="tab-content">
+                        <div class="tab tab-pane active" id="formloggin" >
+                            <h1 class="text-center login_text">Log in</h1>
+                            <center><hr size="5"  color="black" width="70px"></center>
+                            <br>
+                            <!-- form start -->
+                            <form action="" method="">
+                                <!-- username area start -->
+                                <div class="col-12 text-center">
+                                
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" required onkeyup="usernamevalidator(this);"
+                                        name="username" placeholder="Username">
+                                </div>
+                                <!-- username area end -->
+                                <!-- password area start -->
+                                <div class="col-12 text-center">
+                                    
+                                </div>
+                                <div class="col-12">
+                                    <input type="password" class="form-control" required name="password" placeholder="Password">
+                                </div>
+                                <!-- password area end -->
+                                <!-- button area start -->
+                                <div class="col-12 text-center mt-3">
+                                    <button type="submit" class="sub_button"
+                                        id="logginformsubmit">Log in</button>
+                                </div>
+                                <!-- button area end -->
+                            </form>
+                            <!-- form end -->
+                             <!-- Google Login Button -->
+                            <div class="google-login">
+                              <a href="#" id="googleSignIn">
+                                 <img src="https://developers.google.com/identity/images/btn_google_signin_light_normal_web.png" 
+                                 alt="Continue with Google">
+                              </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- loggin form tab content end -->
+                    <!-- register form tab content start -->
+                    <div class="tab-content">
+                        <div class="tab tab-pane" id="formregister">
+                            <h1 class="text-center login_text">Sign up</h1>
+                            <center><hr color="black" size="5" width="70px"></center>
+                            <br>
+                            <!-- register form start -->
+                            <form action="" method="">
+                                <!-- username area start -->
+                                <div class="col-12 text-center">
+                                    
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" required onkeyup="usernamevalidator(this);"
+                                        name="username" id="username" placeholder="Username">
+                                </div>
+                                <!-- username area end -->
+                                <!-- password area start -->
+                                <div class="col-12 text-center">
+                                    
+                                </div>
+                                <div class="col-12">
+                                    <input type="password" class="form-control" required
+                                        onkeyup="passwordvalidator(this);" id="txtpassword" placeholder="Password">
+                                    <div class="valid-feedback">your password is strong ...</div>
+                                    <div class="invalid-feedback">use this format to create strong password (ex :
+                                        abAB12!@)</div>
+                                </div>
+
+                                <!-- password area end -->
+                                <!-- address area start -->
+                                <div class="col-12 text-center">
+                                    
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" id="adress"  placeholder="Address" class="form-control" required>
+                                </div>
+                                <!-- address area end -->
+                                <!-- postal code area start -->
+                                <div class="col-12 text-center">
+                                   
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" id="pcode" required name="username" placeholder="Postal Code"
+                                        onkeyup="postalcodevalidator(this);">
+                                </div>
+                                <!-- postal code area end -->
+                                <!-- mobile number area start -->
+                                <div class="col-12 text-center">
+                                    
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" id="mobile" required onkeyup="numbervalidator(this)"
+                                        name="username" placeholder="Mobile">
+                                </div>
+                                <!-- mobile number area end -->
+                                <!-- button start -->
+                                <div class="col-12">
+                                    <div class="col-12 mt-3 text-end">
+                                        <button type="submit"  class="sub_button"
+                                        id="btnregistersubmit">Sign up</button>
+                                        <button type="button" class="clear_button"  id="clearButton">Clear</button>
+                                        
+                                    </div>
+                                </div>
+                                <!-- button end -->
+                            </form>
+                            <!-- register form end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- modal end -->
+
+    <script src="../bootstrap-5.2.3-/js/bootstrap.bundle.min.js"></script>
+    <script src="./loggin_register_validator.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+
+
+<!--clear button js -->
+
+    <script>
+        document.getElementById("clearButton").addEventListener("click", function() {
+    document.getElementById("username").value = "";
+    document.getElementById("txtpassword").value = "";
+    document.getElementById("adress").value = "";
+    document.getElementById("pcode").value = "";
+    document.getElementById("mobile").value = "";
+});
+    </script>
+<!--clear button js is end-->
+
+</body>
+
+</html>

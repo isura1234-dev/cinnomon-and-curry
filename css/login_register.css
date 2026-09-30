@@ -1,0 +1,160 @@
+
+body{
+    font-family: helvetica;
+}
+
+.nav-link{
+    color: #EE581F;
+}
+.nav-link:hover{
+    color: #c04210;
+    border:1px solid #c04210;
+}
+
+.login_text{
+    margin-top: 30px;
+    color: #666;
+    
+}
+
+
+/* General Form Styling */
+form {
+    max-width: 400px;
+    margin: auto;
+    
+}
+
+/* Input Fields */
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #EE581F; /* Bottom line color */
+    outline: none;
+    background: transparent;
+    transition: border-color 0.3s ease-in-out;
+}
+
+/* Placeholder (Watermark) Styling */
+input[type="text"]::placeholder,
+input[type="password"]::placeholder {
+    color: #aaa;
+    font-style: italic;
+}
+
+/* Focus Effect */
+input[type="text"]:focus,
+input[type="password"]:focus {
+    border-bottom: 2px solid #c04210; /* Darker red on focus */
+    box-shadow: none; /* Prevents any extra blue glow */
+}
+
+/* Label Animation */
+label {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 14px;
+    color: #666;
+    transition: 0.3s ease all;
+    pointer-events: none;
+}
+
+/* Move label on focus */
+input:focus + label,
+input:not(:placeholder-shown) + label {
+    top: -10px;
+    font-size: 12px;
+    color: #d9534f;
+}
+
+/* Button Styling */
+.sub_button {
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    background: linear-gradient(to bottom right,#EE581F,#FAFDFF);
+    transition: 1s;
+    color: white;
+    border: none;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Adds a soft shadow */
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.sub_button:hover {
+    background: linear-gradient(to bottom right,#df7349,#FAFDFF);
+    color: white;
+}
+
+.clear_button{
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    background: linear-gradient(to bottom right,#ebb82c,#FAFDFF);
+    transition: 0.5s;
+    color: white;
+    border: none;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Adds a soft shadow */
+    margin-bottom: 20px;
+    width: 100%;
+    
+}
+
+.error_button{
+    font-size: 16px;
+    padding: 10px 30px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+    background: linear-gradient(to bottom right,#e61717,#FAFDFF);
+    transition: 1s;
+    color: white;
+    border: none;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2); /* Adds a soft shadow */
+    margin-top: 30px;
+    margin-bottom: 20px;
+    width: 100%; 
+}
+
+.clear_button:hover{
+    background: linear-gradient(to bottom right,#ffcd43,#FAFDFF);
+    color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.tab-content {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+
+.google-login {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.google-login a img {
+    width: 200px; /* Adjust size */
+    transition: 0.3s ease-in-out;
+}
+
+.google-login a img:hover {
+    transform: scale(1.05); /* Slight zoom effect on hover */
+}

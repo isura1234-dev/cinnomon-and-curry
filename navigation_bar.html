@@ -1,0 +1,291 @@
+<!doctype html>
+
+<head>
+    <title>
+        Cinnamon & Curry
+    </title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Ravindu Egodawatte Photography">
+    <meta property="og:image" content="https://www.ravinduegodawatte.com/img/pw1.png">
+    <meta property="og:url" content="https://www.ravinduegodawatte.com">
+    <meta property="og:description" content="Capturing Moments, Creating Memories">
+    <!------------title icon------------>
+    <link rel="icon" type="image/x-icon" href="img/logo/c&c.png">
+    <!------------boostrap links-------->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <!-------------css links --------------->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+    <link rel="stylesheet" href="./bootstrap-5.2.3-/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/login_register.css">
+    <style>
+        .badge{
+            font-size: 15px;
+            font-family: 'Times New Roman', Times, serif;
+            color: red;
+            background-color: rgba(85, 85, 85, 0.63);
+        }
+    </style>
+</head>
+
+<!------------Begin body ------------->
+
+<body>
+    <!------------Bosstrap java script links------->
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!--------Navigation bar----->
+
+    <nav class="sticky-top">
+        <ul class="sidebar">
+            <li onclick=hideSidebar()><a href="#" class="aa1"><img src="img/icon/s2.png"></a>
+            </li>
+            <li onclick=hideSidebar()><a href="#" class="aa1">HOME</a></li>
+            <li><a href="#" class="aa1">DISHES</a>
+                <ul class="">
+                    <li><a href="srilankan.html">SRI ANKAN DISHES</a></li>
+                    <li><a href="">INDIAN DISHES</a></li>
+                    <li><a href="">CHINEES DISHES</a></li>
+                    <li><a href="">ITALIYAN DISHES</a></li>
+                    <li><a href="">BEVERAGES</a></li>
+                    <li><a href="">DESERTS</a></li>
+                </ul>
+            </li>
+            <li onclick=hideSidebar()><a href="" class="aa1">OUR JOURNEY</a></li>
+            <li onclick=hideSidebar()><a href="" class="aa1">CONTACT US</a></li>
+            <li onclick=hideSidebar()><a href="" class="aa1">FEED BACK</a></li>
+            <li onclick=hideSidebar() id="sidebarlogginbutton"><a href="" class="aa1" data-bs-toggle="modal"
+                    data-bs-target="#logginmodal"><img src="img/icon/login.png" width="30px" height="30px"
+                        class="logicon">LOGIN</a></li>
+            <li onclick=hideSidebar() id="sidebarcardbutton"><a href="showcartdetails.php" class="aa1"><img
+                        src="img/icon/shopping-cart.png" width="35px" height="35px" class="logicon">CART</a>
+                    
+                    </li>
+            <li onclick="hideSidebar(),deletecookiefuction()" id="sidebarloggoutbutton"><a href="" class="aa1"><img
+                        src="img/icon/logout.png" width="30px" height="30px" class="logicon">LOGOUT</a></li>
+        </ul>
+        <ul>
+            <li><a href=""><img src="./img/logo/CINNOMON AND CURRY1.png" width="153.9px" height="90px"></a></li>
+            <li class="hideOnMobile"><a href="#" class="aa1">HOME</a></li>
+            <li class="hideOnMobile"><a href="#" class="aa1">DISHES</a>
+                <ul>
+                    <li><a href="srilankan.html" class="aa1">SRI LANKAN DISHES</a></li>
+                    <li><a href="" class="aa1">INDIAN DISHES</a></li>
+                    <li><a href="" class="aa1">CHINEES DISHES</a></li>
+                    <li><a href="" class="aa1">ITALIYAN DISHES</a></li>
+                    <li><a href="" class="aa1">BEVARAGES</a></li>
+                    <li><a href="" class="aa1">DEZERTS</a></li>
+                </ul>
+            </li>
+            <li class="hideOnMobile"><a href="#about-us" class="aa1">OUR JOURNEY</a></li>
+            <li class="hideOnMobile"><a href="contactus.html" class="aa1">CONTACT US</a></li>
+            <li class="hideOnMobile"><a href="#Testimonials" class="aa1">FEED BACK</a></li>
+            <li class="hideOnMobile" id="navlogginbutton"><a href="#Video-Productions" class="aa1"
+                    data-bs-toggle="modal" data-bs-target="#logginmodal"><img src="img/icon/login.png" width="20px"
+                        height="20px" class="logicon">LOGIN</a></li>
+            <li class="hideOnMobile" id="navcartbutton"><a href="showcartdetails.php" class="aa1"><img src="img/icon/shopping-cart.png"
+                        width="25px" height="25px" class="logicon">CART <sup><span class="badge m-1" id="cardcountbadge"> 0 </span></sup></a></li>
+            <li class="hideOnMobile" id="navloggoutbutton" onclick="deletecookiefuction()"><a href="" class="aa1"><img
+                        src="img/icon/logout.png" width="20px" height="20px" class="logicon">LOGOUT</a></li>
+            <li class="menu-button" onclick=showSidebar()><img src="img/icon/s1.png"></li>
+        </ul>
+    </nav>
+    <script>
+        function showSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'flex'
+        }
+        function hideSidebar() {
+            const sidebar = document.querySelector('.sidebar')
+            sidebar.style.display = 'none'
+
+        }
+    </script>
+
+
+
+
+
+
+    <!-- modal start -->
+
+    <div class="modal" id="logginmodal" data-bs-backdrop="static">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal_head_text">Create Your Dining Experience...</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="close"
+                        onclick="modalclosefunction()"></button>
+                </div>
+                <div class="modal-body">
+                    <!-- nav bar start -->
+                    <ul class="nav nav-tabs">
+                        <!-- loggin tab item start -->
+                        <li class="nav-item">
+                            <button type="button" class="nav-link active" data-bs-toggle="tab"
+                                data-bs-target="#formloggin" id="tablogginbutton">Log in</button>
+                        </li>
+                        <!-- loggin tab item end -->
+                        <!-- register tab item start -->
+                        <li class="nav-item">
+                            <button type="button" class="nav-link" data-bs-toggle="tab" data-bs-target="#formregister"
+                                id="tableregisterbutton" onclick="logginactivebutton(this)">Sign up</button>
+                        </li>
+                        <!-- register tab item end -->
+                    </ul>
+                    <!-- nav bar end -->
+
+                    <!-- row end -->
+
+
+                    <!-- loggin form tab content start -->
+                    <div class="tab-content">
+                        <div class="tab tab-pane active" id="formloggin">
+                            <h1 class="text-center login_text">Log in</h1>
+                            <center>
+                                <hr size="5" color="black" width="70px">
+                            </center>
+                            <br>
+                            <!-- form start -->
+                            <form action="logginprocessor.php" method="get">
+                                <!-- username area start -->
+                                <div class="col-12 text-center">
+
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" required onkeyup="usernamevalidator(this);"
+                                        name="txtusername" placeholder="Username" id="txtlogusername">
+                                </div>
+                                <!-- username area end -->
+                                <!-- password area start -->
+                                <div class="col-12 text-center">
+
+                                </div>
+                                <div class="col-12">
+                                    <input type="password" class="form-control" required name="txtpassword"
+                                        placeholder="Password" id="txtlogpassword">
+                                </div>
+                                <!-- password area end -->
+                                <!-- button area start -->
+                                <div class="col-12 text-center mt-3">
+                                    <button type="submit" class="sub_button" id="logginformsubmit">Log
+                                        in</button>
+                                </div>
+                                <!-- button area end -->
+                            </form>
+                            <!-- form end -->
+                            <!-- Google Login Button -->
+                            <div class="google-login">
+                                <a href="#" id="googleSignIn">
+                                    <img src="https://developers.google.com/identity/images/btn_google_signin_light_normal_web.png"
+                                        alt="Continue with Google">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- loggin form tab content end -->
+                    <!-- register form tab content start -->
+                    <div class="tab-content">
+                        <div class="tab tab-pane" id="formregister">
+                            <h1 class="text-center login_text">Sign up</h1>
+                            <center>
+                                <hr color="black" size="5" width="70px">
+                            </center>
+                            <br>
+                            <!-- register form start -->
+                            <form action="registerprocessor.php" method="get">
+                                <!-- username area start -->
+                                <div class="col-12 text-center">
+
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" required onkeyup="usernamevalidator(this);"
+                                        name="txtusername" id="username" placeholder="Username">
+                                </div>
+                                <!-- username area end -->
+                                <!-- password area start -->
+                                <div class="col-12 text-center">
+
+                                </div>
+                                <div class="col-12">
+                                    <input type="password" class="form-control" required
+                                        onkeyup="passwordvalidator(this);" id="txtpassword" placeholder="Password"
+                                        name="txtpassword">
+                                    <div class="valid-feedback">your password is strong ...</div>
+                                    <div class="invalid-feedback">use this format to create strong password (ex
+                                        :
+                                        abAB12!@)</div>
+                                </div>
+
+                                <!-- password area end -->
+                                <!-- address area start -->
+                                <div class="col-12 text-center">
+
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" id="adress" name="txtaddress" placeholder="Address"
+                                        class="form-control" required>
+                                </div>
+                                <!-- address area end -->
+                                <!-- postal code area start -->
+                                <div class="col-12 text-center">
+
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" id="pcode" required name="txtpostalcode"
+                                        placeholder="Postal Code" onkeyup="postalcodevalidator(this);">
+                                </div>
+                                <!-- postal code area end -->
+                                <!-- mobile number area start -->
+                                <div class="col-12 text-center">
+
+                                </div>
+                                <div class="col-12">
+                                    <input type="text" class="form-control" id="mobile" required
+                                        onkeyup="numbervalidator(this)" name="txtmobile" placeholder="Mobile">
+                                </div>
+                                <!-- mobile number area end -->
+                                <!-- button start -->
+                                <div class="col-12">
+                                    <div class="col-12 mt-3 text-end">
+                                        <button type="submit" class="sub_button" id="btnregistersubmit" ">Sign up</button>
+                                    <button type=" button" class="clear_button" id="clearButton"
+                                            onclick="registationclearfunction()">Clear</button>
+
+                                    </div>
+                                </div>
+                                <!-- button end -->
+                            </form>
+                            <!-- register form end -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal end -->
+    <script src="./fontawesome-free-6.7.2/js/all.min.js"></script>
+    <script src="./bootstrap-5.2.3-/js/bootstrap.bundle.min.js"></script>
+    <script src="./loggin_register_validator.js"></script>
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <script src="./datapassbyajax.js"></script>
+
+
+
+</body>
+
+</html>
